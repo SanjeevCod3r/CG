@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Summary</title>
+</head>
+<body>
+<h1>Summary of Your Information</h1>
+<div>
+    <label>First Name:</label>
+    <span th:text="${userForm.firstName}"></span>
+</div>
+<div>
+    <label>Last Name:</label>
+    <span th:text="${userForm.lastName}"></span>
+</div>
+<div>
+    <label>Email:</label>
+    <span th:text="${userForm.email}"></span>
+</div>
+<div>
+    <label>Phone:</label>
+    <span th:text="${userForm.phone}"></span>
+</div>
+<div>
+    <label>City:</label>
+    <span th:text="${userForm.city}"></span>
+</div>
+<div>
+    <label>Country:</label>
+    <span th:text="${userForm.country}"></span>
+</div>
+<!-- Removed the "Start Over" button/link -->
+</body>
+</html>

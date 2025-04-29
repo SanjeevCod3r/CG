@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 3 - Location Information</title>
+</head>
+<body>
+<h1>Location Information</h1>
+<form th:action="@{/processPage3}" th:object="${userForm}" method="post">
+    <div>
+        <label>First Name:</label>
+        <span th:text="*{firstName}"></span>
+        <input type="hidden" th:field="*{firstName}">
+    </div>
+    <div>
+        <label>Last Name:</label>
+        <span th:text="*{lastName}"></span>
+        <input type="hidden" th:field="*{lastName}">
+    </div>
+    <div>
+        <label>Email:</label>
+        <span th:text="*{email}"></span>
+        <input type="hidden" th:field="*{email}">
+    </div>
+    <div>
+        <label>Phone:</label>
+        <span th:text="*{phone}"></span>
+        <input type="hidden" th:field="*{phone}">
+    </div>
+    <div>
+        <label for="city">City:</label>
+        <input type="text" id="city" th:field="*{city}" required>
+    </div>
+    <div>
+        <label for="country">Country:</label>
+        <input type="text" id="country" th:field="*{country}" required>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+</body>
+</html>
